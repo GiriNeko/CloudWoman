@@ -290,6 +290,14 @@ for list in playlist['playlist']:
             track_file_name = '{}.{}'.format(str(track['name']),os.path.splitext(track_url)[-1][1:])
             #replace some file name
             track_file_name = track_file_name.replace("/"," ")
+            track_file_name = track_file_name.replace("?"," ")
+            track_file_name = track_file_name.replace(":"," ")
+            track_file_name = track_file_name.replace("|"," ")
+            track_file_name = track_file_name.replace("<"," ")
+            track_file_name = track_file_name.replace(">"," ")
+
+
+
             track_file_path = os.path.join(dirName, track_file_name)
 
             download_file(track_url, track_file_name, dirName)
@@ -417,6 +425,12 @@ for list in playlist['playlist']:
                 
                 fix_track_name = str(track['name'])
                 fix_track_name = fix_track_name.replace("/"," ")
+                fix_track_name = fix_track_name.replace("?"," ")
+                fix_track_name = fix_track_name.replace(":"," ")
+                fix_track_name = fix_track_name.replace("|"," ")
+                fix_track_name = fix_track_name.replace("<"," ")
+                fix_track_name = fix_track_name.replace(">"," ")
+
                 track_lyric_file = open(os.path.join(dirName, fix_track_name  + '.lrc'), 'w', encoding='utf8')
 
                 if ('tlyric' in track_lyric_raw) and (track_lyric_raw['tlyric']['version'] != 0) and not(track_lyric_raw['tlyric']['lyric'] is None):
