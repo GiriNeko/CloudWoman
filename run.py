@@ -295,6 +295,7 @@ for list in playlist['playlist']:
             track_file_name = track_file_name.replace("|"," ")
             track_file_name = track_file_name.replace("<"," ")
             track_file_name = track_file_name.replace(">"," ")
+            track_file_name = track_file_name.replace('"'," ")
 
 
 
@@ -430,6 +431,7 @@ for list in playlist['playlist']:
                 fix_track_name = fix_track_name.replace("|"," ")
                 fix_track_name = fix_track_name.replace("<"," ")
                 fix_track_name = fix_track_name.replace(">"," ")
+                fix_track_name = fix_track_name.replace('"'," ")
 
                 track_lyric_file = open(os.path.join(dirName, fix_track_name  + '.lrc'), 'w', encoding='utf8')
 
