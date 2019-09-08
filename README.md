@@ -1,4 +1,4 @@
-> 本项目基于`LoliLin/CloudMan`魔改而成
+> 本项目自`LoliLin/CloudMan`魔改而成
 
 ## 魔改思路
 
